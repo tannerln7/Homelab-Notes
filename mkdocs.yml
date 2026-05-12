@@ -1,0 +1,62 @@
+site_name: Personal Documentation
+site_description: Personal homelab, infrastructure, service, hardware, and operations notes.
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: blue grey
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+exclude_docs: |
+  !/templates/
+  !/templates/**
+
+nav:
+  - Home: index.md
+  - Infrastructure:
+      - infrastructure/index.md
+      - OTBR:
+          - infrastructure/otbr/index.md
+          - Overview: infrastructure/otbr/overview.md
+          - Configuration: infrastructure/otbr/configuration.md
+          - Updates: infrastructure/otbr/updates.md
+          - Scripts: infrastructure/otbr/scripts.md
+          - Changes: infrastructure/otbr/changes.md
+          - Notes: infrastructure/otbr/notes.md
+  - Services:
+      - services/index.md
+  - Applications:
+      - applications/index.md
+  - Networking:
+      - networking/index.md
+  - Hardware:
+      - hardware/index.md
+  - Automation:
+      - automation/index.md
+  - Scripts:
+      - scripts/index.md
+  - Templates:
+      - templates/item-template.md
+      - templates/script-template.md
+      - templates/change-log-template.md
+      - templates/notes-template.md
