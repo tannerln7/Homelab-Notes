@@ -21,7 +21,7 @@ OTBR is documented here as an OpenThread Border Router running in a Debian LXC, 
 - [Overview](overview.md)
 - [Configuration](configuration.md)
 - [Updates](updates.md)
-- [Scripts](scripts.md)
+- [Scripts](scripts/index.md)
 - [Changes](changes.md)
 - [Notes](notes.md)
 

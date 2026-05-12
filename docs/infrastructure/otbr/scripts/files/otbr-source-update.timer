@@ -1,0 +1,11 @@
+[Unit]
+Description=Weekly OTBR source update check
+
+[Timer]
+OnCalendar=Fri *-*-* 04:00:00
+Persistent=true
+RandomizedDelaySec=20m
+Unit=otbr-source-update.service
+
+[Install]
+WantedBy=timers.target

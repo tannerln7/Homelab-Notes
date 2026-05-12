@@ -23,6 +23,8 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.details
+  - pymdownx.snippets:
+      base_path: .
   - pymdownx.superfences
   - toc:
       permalink: true
@@ -40,7 +42,11 @@ nav:
           - Overview: infrastructure/otbr/overview.md
           - Configuration: infrastructure/otbr/configuration.md
           - Updates: infrastructure/otbr/updates.md
-          - Scripts: infrastructure/otbr/scripts.md
+          - Scripts:
+              - Script Index: infrastructure/otbr/scripts/index.md
+              - Update Script: infrastructure/otbr/scripts/update-otbr-from-source.md
+              - Systemd Units: infrastructure/otbr/scripts/systemd-units.md
+              - Helper Commands: infrastructure/otbr/scripts/helper-commands.md
           - Changes: infrastructure/otbr/changes.md
           - Notes: infrastructure/otbr/notes.md
   - Services:

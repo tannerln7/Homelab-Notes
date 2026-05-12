@@ -1,5 +1,33 @@
 # OTBR Changes
 
+## 2026-05-12 — Restructure OTBR script and unit documentation
+
+### Changed
+- Copied the actual OTBR update script, service unit, timer unit, and helper wrapper into `docs/infrastructure/otbr/scripts/files/` as documentation copies.
+- Split the old single OTBR scripts page into focused pages for the main update script, systemd units, and helper commands.
+- Removed duplicated script and unit detail from the OTBR updates and configuration pages.
+- Enabled MkDocs snippets so the copied source files can be rendered directly in the docs.
+
+### Reason
+- Keep the canonical script and unit contents in one place inside the documentation tree.
+- Reduce duplication between OTBR pages while keeping the runtime paths and operational notes easy to find.
+
+### Files / paths touched
+- `mkdocs.yml`
+- `docs/infrastructure/otbr/scripts/`
+- `docs/infrastructure/otbr/scripts/files/`
+- `docs/infrastructure/otbr/updates.md`
+- `docs/infrastructure/otbr/configuration.md`
+
+### Commands used
+```bash
+mkdocs build
+```
+
+### Notes
+- Runtime install locations were documented, not changed.
+- The copied files under `docs/infrastructure/otbr/scripts/files/` are documentation copies sourced from `tmp/scripts/`.
+
 ## 2026-05-12 — Setup source update automation
 
 ### Changed

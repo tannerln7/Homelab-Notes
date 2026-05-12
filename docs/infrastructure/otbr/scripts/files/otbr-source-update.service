@@ -1,0 +1,9 @@
+[Unit]
+Description=Update and rebuild OTBR from source
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+Environment=INFRA_IF_NAME=eth0
+ExecStart=/usr/local/sbin/update-otbr-from-source.sh
