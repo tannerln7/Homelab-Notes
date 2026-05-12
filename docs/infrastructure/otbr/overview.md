@@ -2,13 +2,26 @@
 
 ## Purpose
 
-Describe what this OTBR instance does and why it exists.
+This item covers the OpenThread Border Router deployment that runs in a Debian LXC and is maintained from a local source clone.
 
 ## Deployment context
 
-- Where it runs: Unknown / not documented yet.
-- Related systems: Unknown / not documented yet.
+- Runtime location: Debian LXC.
+- Source tree: `/root/ot-br-posix`.
+- Source updates are handled through a dedicated script and systemd timer workflow.
 
-## Important paths and services
+## Known services
 
-- Unknown / not documented yet.
+- `otbr-agent.service`
+- `otbr-web.service`
+- `otbr-firewall.service`
+- `otbr-nat44.service`
+- `otbr-source-update.service`
+- `otbr-source-update.timer`
+
+## Operational notes
+
+- Some OTBR services may appear as generated systemd units from SysV init scripts.
+- Avoid unattended forced rebuilds.
+- Verify `ot-ctl` state after major updates.
+- Keep RCP firmware changes documented separately.

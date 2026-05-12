@@ -1,23 +1,42 @@
 # OTBR Scripts
 
-## Script inventory
+## Source update script
 
-- Path: Unknown / not documented yet.
-- Purpose: Unknown / not documented yet.
-- Related units: Unknown / not documented yet.
+- Path: `/usr/local/sbin/update-otbr-from-source.sh`
+- Purpose: check the OTBR Git checkout and rebuild from source when upstream has changed.
+- Related units: `otbr-source-update.service`, `otbr-source-update.timer`
+- Log file: `/var/log/otbr-source-update.log`
+- Backup path: `/var/backups/otbr-source-update`
 
-## Arguments
+## Known arguments
 
 | Argument | Meaning |
 | --- | --- |
-| Unknown / not documented yet | Unknown / not documented yet |
+| `--force` | Force a rebuild instead of waiting for an upstream change |
 
-## Usage
+## Usage examples
 
-```text
-Unknown / not documented yet.
+Normal systemd-triggered update check:
+
+```bash
+systemctl start otbr-source-update.service
+```
+
+Forced rebuild:
+
+```bash
+/usr/local/sbin/update-otbr-from-source.sh --force
+```
+
+Check recent logs:
+
+```bash
+journalctl -u otbr-source-update.service -n 120 --no-pager
+tail -n 120 /var/log/otbr-source-update.log
 ```
 
 ## Full script content
 
 Unknown / not documented yet.
+
+Add the real script later if it is useful to keep here, but do not invent or paraphrase its contents.

@@ -1,17 +1,22 @@
 # OTBR Changes
 
-Use the reverse-chronological change log format from the site templates.
-
-## YYYY-MM-DD — Initial entry
+## 2026-05-12 — Setup source update automation
 
 ### Changed
-- Unknown / not documented yet.
+- Added a source update workflow around `/usr/local/sbin/update-otbr-from-source.sh`.
+- Added `otbr-source-update.service` and `otbr-source-update.timer` for scheduled update checks.
+- Recorded the log path and backup path used by the workflow.
 
 ### Reason
-- Unknown / not documented yet.
+- Keep the OTBR source build current without rebuilding unnecessarily.
+- Make update checks repeatable and easier to audit later.
 
 ### Files / paths touched
-- Unknown / not documented yet.
+- `/root/ot-br-posix`
+- `/usr/local/sbin/update-otbr-from-source.sh`
+- `/var/log/otbr-source-update.log`
+- `/var/backups/otbr-source-update`
+- `/etc/default/otbr-agent`
 
 ### Commands used
 ```text
@@ -19,4 +24,8 @@ Unknown / not documented yet.
 ```
 
 ### Notes
-- Add the first meaningful real-world change here.
+- Scheduled update checks run on Fridays at 04:00 with `RandomizedDelaySec=20m`.
+- Scheduled runs check Git and only rebuild when upstream has changed.
+- Avoid unattended forced rebuilds.
+- Verify `ot-ctl` state after major updates.
+- Document RCP firmware changes separately.
