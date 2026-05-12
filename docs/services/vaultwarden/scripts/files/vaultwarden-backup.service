@@ -1,0 +1,6 @@
+[Unit]
+Description=Vaultwarden backup
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/vaultwarden-backup.sh

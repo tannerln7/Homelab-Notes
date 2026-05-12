@@ -51,6 +51,22 @@ nav:
           - Notes: infrastructure/otbr/notes.md
   - Services:
       - services/index.md
+      - Vaultwarden:
+          - services/vaultwarden/index.md
+          - Overview: services/vaultwarden/overview.md
+          - Configuration: services/vaultwarden/configuration.md
+          - Updates: services/vaultwarden/updates.md
+          - Backup / Restore: services/vaultwarden/backup-restore.md
+          - Scripts:
+              - Script Index: services/vaultwarden/scripts/index.md
+              - Update Script: services/vaultwarden/scripts/update-script.md
+              - Deploy Web Vault: services/vaultwarden/scripts/deploy-webvault.md
+              - Backup Script: services/vaultwarden/scripts/backup-script.md
+              - Healthcheck: services/vaultwarden/scripts/healthcheck.md
+              - Systemd Units: services/vaultwarden/scripts/systemd-units.md
+              - Environment: services/vaultwarden/scripts/environment.md
+          - Changes: services/vaultwarden/changes.md
+          - Notes: services/vaultwarden/notes.md
   - Applications:
       - applications/index.md
   - Networking:

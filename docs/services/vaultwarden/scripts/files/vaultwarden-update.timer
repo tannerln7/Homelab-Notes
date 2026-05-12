@@ -1,0 +1,9 @@
+[Unit]
+Description=Run Vaultwarden update Fridays at 04:00
+
+[Timer]
+OnCalendar=Fri *-*-* 04:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

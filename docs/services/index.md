@@ -9,6 +9,6 @@ Use this section for self-hosted services, databases, media stacks, monitoring, 
 - Backup and update procedures.
 - Service-specific quirks and failure modes.
 
-## Status
+## Current items
 
-No service pages have been added yet.
+- [Vaultwarden](vaultwarden/index.md)
